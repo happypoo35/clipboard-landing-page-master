@@ -1,0 +1,190 @@
+@import "config";
+@import "global";
+
+.container {
+  background: no-repeat top/100% url("../images/bg-header-desktop.png");
+  padding: 8.125rem 2rem 0;
+}
+
+header {
+  @extend %mb;
+
+  .logo {
+    margin-bottom: 4rem;
+  }
+
+  p {
+    margin-bottom: 3.125rem;
+  }
+}
+
+.track {
+  margin-bottom: 5.25rem;
+}
+
+.features {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  margin-bottom: 15rem;
+
+  @include tablet {
+    grid-template-columns: 1fr;
+    margin-bottom: 12rem;
+  }
+
+  .img {
+    position: relative;
+
+    img {
+      position: absolute;
+      right: 0;
+
+      @include tablet {
+        position: unset;
+        width: 100%;
+      }
+    }
+  }
+
+  &-container {
+    padding: 4.25rem 0 0 6.75rem;
+    width: min(450px, 100%);
+
+    @include tablet {
+      justify-self: center;
+      padding: 3.75rem 0 0;
+    }
+
+    article:not(:last-child) {
+      margin-bottom: 3rem;
+    }
+  }
+}
+
+.access {
+  margin-bottom: 4rem;
+
+  .img {
+    img {
+      width: 100%;
+    }
+  }
+
+  p {
+    margin-bottom: clamp(4rem, 12vw, 7rem);
+  }
+}
+
+.workflow {
+  width: 100%;
+  @extend %mb;
+
+  > p {
+    margin-bottom: 4.75rem;
+  }
+
+  &-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+    gap: 3.5rem 1.75rem;
+
+    @include mobile {
+      grid-template-columns: 1fr;
+    }
+
+    article {
+      display: grid;
+      grid-template-rows: 2.5rem auto 1fr;
+
+      img {
+        align-self: center;
+        justify-self: center;
+      }
+
+      h3 {
+        margin-top: 2rem;
+      }
+    }
+  }
+}
+
+.brands {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  gap: 4rem 2rem;
+  width: 100%;
+  @extend %mb;
+
+  .brand {
+    display: grid;
+    place-items: center;
+  }
+}
+
+.clipboard {
+  @extend %mb;
+
+  p {
+    margin-bottom: 3.125rem;
+  }
+}
+
+.footer {
+  background: #f5f6f8;
+  padding: 0 2rem;
+
+  &-container {
+    flex-direction: row !important;
+    justify-content: space-between;
+    padding: 2.875rem 0;
+
+    @include tablet {
+      flex-direction: column !important;
+      gap: 3rem;
+    }
+  }
+
+  img {
+    width: 3.5rem;
+  }
+
+  .links {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0 2rem 0 8.375rem;
+    gap: 1.5rem 6rem;
+
+    @include tablet {
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      padding: 0;
+    }
+
+    li {
+      display: flex;
+      flex-flow: column;
+      gap: 1.5rem;
+
+      @include tablet {
+        justify-content: center;
+        align-items: center;
+      }
+    }
+  }
+
+  .social {
+    display: flex;
+    justify-content: flex-end;
+    flex: 1;
+    gap: 1.5rem;
+
+    @include tablet {
+      gap: 2rem;
+    }
+
+    a {
+      font-size: 1.5rem;
+    }
+  }
+}

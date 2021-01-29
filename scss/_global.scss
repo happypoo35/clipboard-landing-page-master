@@ -1,0 +1,161 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: min(1110px, 100%);
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.pw {
+  width: min(700px, 100%);
+  margin-left: auto;
+  margin-right: auto;
+}
+
+body {
+  font-family: "Bai Jamjuree", sans-serif;
+  font-weight: 400;
+  color: $Grayish-Blue;
+}
+
+h1,
+h2,
+h3,
+p {
+  text-align: center;
+}
+
+.features article * {
+  text-align: left;
+
+  @include tablet {
+    text-align: center;
+  }
+}
+
+h1,
+h2,
+h3 {
+  font-weight: 600;
+  color: $Dark-Grayish-Blue;
+  letter-spacing: -0.017em;
+}
+
+h1,
+h2 {
+  margin-bottom: 1rem;
+}
+
+h1 {
+  font-size: clamp(2rem, 5vw, 2.875rem);
+}
+
+h2 {
+  font-size: clamp(1.75rem, 4vw, 2.25rem);
+}
+
+h3 {
+  font-size: 1.5rem;
+  margin-bottom: 0.875rem;
+}
+
+p {
+  font-size: 1.125rem;
+  letter-spacing: 0.008em;
+  line-height: 1.5;
+}
+
+header p {
+  font-size: 1.25rem;
+}
+
+article p {
+  font-size: 1rem;
+  line-height: 1.875;
+}
+
+p,
+header p,
+article p {
+  @include tablet {
+    font-size: 1rem;
+    line-height: 1.625;
+  }
+}
+
+a {
+  font-size: 1.125rem;
+  letter-spacing: 0.008em;
+  text-decoration: none;
+  color: $Dark-Grayish-Blue;
+  @extend %tr;
+
+  &:hover {
+    color: $Strong-Cyan;
+  }
+}
+
+ul {
+  list-style: none;
+}
+
+.btn-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+button {
+  cursor: pointer;
+  font-family: inherit;
+  font-weight: 600;
+  letter-spacing: 0.028em;
+  color: rgba(white, 0.8);
+  font-size: 1.125rem;
+  outline: none;
+  border: none;
+  border-radius: 3rem;
+  padding: 1rem 2.25rem 0.875rem;
+  border-bottom: 3px solid;
+  @extend %tr;
+
+  @include mobile {
+    width: 100%;
+  }
+
+  &:hover {
+    color: white;
+  }
+}
+
+.green {
+  background: $Strong-Cyan;
+  border-color: darken($Strong-Cyan, 10%);
+  box-shadow: 0 0.5rem 1.5rem rgba($Strong-Cyan, 0.4);
+
+  &:hover {
+    background: lighten($Strong-Cyan, 3%);
+    border-color: darken($Strong-Cyan, 5%);
+  }
+}
+
+.blue {
+  background: $Light-Blue;
+  border-color: darken($Light-Blue, 10%);
+  box-shadow: 0 0.5rem 1.5rem rgba(black, 0.15);
+
+  &:hover {
+    background: lighten($Light-Blue, 3%);
+    border-color: darken($Light-Blue, 5%);
+  }
+}

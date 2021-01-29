@@ -1,0 +1,28 @@
+@import url("https://fonts.googleapis.com/css2?family=Bai+Jamjuree:wght@400;600&display=swap");
+
+$Strong-Cyan: hsl(171, 66%, 44%);
+$Light-Blue: hsl(233, 100%, 69%);
+$Dark-Grayish-Blue: hsl(210, 10%, 33%);
+$Grayish-Blue: hsl(201, 11%, 66%);
+
+%mb {
+  margin-bottom: 9.5rem;
+}
+
+%tr {
+  transition: 0.3s ease;
+}
+
+$tablet: 768px;
+$mobile: 425px;
+
+@mixin tablet {
+  @media screen and(max-width:$tablet) {
+    @content;
+  }
+}
+@mixin mobile {
+  @media screen and(max-width:$mobile) {
+    @content;
+  }
+}
